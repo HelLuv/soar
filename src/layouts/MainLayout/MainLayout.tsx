@@ -1,12 +1,19 @@
 import { Outlet } from "react-router";
 import { FC } from "react";
+import { Header } from "@/components/Header";
+import { Sidebar } from "@/components/Sidebar";
+import { SIDEBAR_LINKS } from "@/constants";
 
-const Dashboard: FC = () => (
-  <div>
-    <h1>Here should be the different header based on route</h1>
+const MainLayout: FC = () => (
+  <main className="flex flex-col">
+    <Header />
 
-    <Outlet />
-  </div>
+    <div className="flex">
+      <Sidebar links={SIDEBAR_LINKS} />
+
+      <Outlet />
+    </div>
+  </main>
 );
 
-export default Dashboard;
+export default MainLayout;
