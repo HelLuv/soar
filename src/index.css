@@ -146,11 +146,17 @@
 
     /* Logo */
     .main-logo {
-        @apply transition-all flex items-center gap-4 px-3 lg:w-[250px] border-r border-gray-200 h-full lg:pl-[44px]  max-sm:hidden;
+        @apply transition-all flex items-center gap-4 px-3 lg:w-[250px]
+        border-r border-gray-200 h-full lg:pl-[44px] max-sm:hidden;
     }
 
     .main-logo-label {
         @apply max-lg:hidden;
+    }
+    /* SearchBar */
+    .search-bar-input {
+        @apply w-[255px] h-[50px] pl-16 rounded-[40px] bg-blue-200
+        placeholder:text-[#8BA3CB] text-15;
     }
 
     /* Sidebar */

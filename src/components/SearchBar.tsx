@@ -30,7 +30,7 @@ export const SearchBar: FC<Props> = ({ onSubmit }) => {
         onKeyDown={handleKeyDown}
         value={searchValue}
         onChange={handleSearch}
-        className="w-[255px] h-[50px] pl-16 rounded-[40px] bg-[#F5F7FA] placeholder:!text-[#8BA3CB] text-15"
+        className="search-bar-input"
         placeholder="Search for something"
       />
     </div>
