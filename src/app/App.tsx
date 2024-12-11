@@ -4,6 +4,7 @@ import MainLayout from "@/layouts/MainLayout";
 
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
 const Settings = lazy(() => import("@/pages/Settings"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
 
 export const App: FC = () => {
   return (
@@ -27,6 +28,15 @@ export const App: FC = () => {
             }
           />
         </Route>
+
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <NotFound />
+            </Suspense>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
