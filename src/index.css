@@ -2,14 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
     color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    color: black;
+    background-color: white;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -75,12 +82,98 @@
     }
 }
 
-@layer base {
-    * {
-        @apply border-border;
+@layer utilities {
+
+    .text-dark-2 {
+        @apply text-black;
     }
 
-    body {
-        @apply bg-background text-foreground;
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+
+    .header-2 {
+        @apply text-18 font-semibold text-gray-900;
+    }
+
+    .text-10 {
+        @apply text-[10px] leading-[14px];
+    }
+
+    .text-12 {
+        @apply text-[12px] leading-[16px];
+    }
+
+    .text-14 {
+        @apply text-[14px] leading-[20px];
+    }
+
+    .text-15 {
+        @apply text-[15px] leading-[22px];
+    }
+
+    .text-16 {
+        @apply text-[16px] leading-[24px];
+    }
+
+    .text-18 {
+        @apply text-[18px] leading-[22px];
+    }
+
+    .text-20 {
+        @apply text-[20px] leading-[24px];
+    }
+
+    .text-24 {
+        @apply text-[24px] leading-[30px];
+    }
+
+    .text-26 {
+        @apply text-[26px] leading-[32px];
+    }
+
+    .text-28 {
+        @apply text-[28px] leading-[36px];
+    }
+
+    .text-30 {
+        @apply text-[30px] leading-[38px];
+    }
+
+    .text-36 {
+        @apply text-[36px] leading-[44px];
+    }
+
+    /* Logo */
+    .main-logo {
+        @apply transition-all flex items-center gap-4 px-3 lg:w-[250px]
+        border-r border-gray-200 h-full lg:pl-[44px] max-sm:hidden;
+    }
+
+    .main-logo-label {
+        @apply max-lg:hidden;
+    }
+    /* SearchBar */
+    .search-bar-input {
+        @apply w-[255px] h-[50px] pl-16 rounded-[40px] bg-blue-200
+        placeholder:text-[#8BA3CB] text-15;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        @apply transition-all flex h-screen w-fit flex-col justify-between border-r border-gray-200 bg-white
+        pt-[30px] lg:w-[250px] max-sm:hidden;
+    }
+
+    .sidebar-active-indicator {
+        @apply absolute left-0 -top-[15px] w-[6px] h-[60px] rounded-tr-[6px] rounded-br-[6px] bg-black;
+    }
+
+    .sidebar-link {
+        @apply transition-all relative px-4 lg:pl-[42px];
+    }
+
+    .sidebar-label {
+        @apply text-18 font-medium text-gray-300 max-lg:hidden;
     }
 }
