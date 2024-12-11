@@ -6,12 +6,14 @@ import { SIDEBAR_LINKS } from "@/constants";
 
 const MainLayout: FC = () => (
   <main className="flex flex-col">
-    <Header />
+    <Header links={SIDEBAR_LINKS} />
 
     <div className="flex">
       <Sidebar links={SIDEBAR_LINKS} />
 
-      <Outlet />
+      <div className="flex-1 border-t border-gray-200">
+        <Outlet />
+      </div>
     </div>
   </main>
 );

@@ -15,8 +15,8 @@
     font-weight: 400;
 
     color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    color: black;
+    background-color: white;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -128,6 +128,10 @@
         @apply text-[26px] leading-[32px];
     }
 
+    .text-28 {
+        @apply text-[28px] leading-[36px];
+    }
+
     .text-30 {
         @apply text-[30px] leading-[38px];
     }
@@ -136,9 +140,18 @@
         @apply text-[36px] leading-[44px];
     }
 
+    /* Logo */
+    .main-logo {
+        @apply transition-all flex items-center gap-4 px-3 lg:w-[250px] border-r border-gray-200 h-full lg:pl-[44px]  max-sm:hidden;
+    }
+
+    .main-logo-label {
+        @apply max-lg:hidden;
+    }
+
     /* Sidebar */
     .sidebar {
-        @apply flex h-screen w-fit flex-col justify-between border-r border-[#E6EFF5] bg-white
+        @apply transition-all flex h-screen w-fit flex-col justify-between border-r border-gray-200 bg-white
         pt-[30px] lg:w-[250px] max-sm:hidden;
     }
 
@@ -147,7 +160,7 @@
     }
 
     .sidebar-link {
-        @apply relative px-4 lg:pl-[42px];
+        @apply transition-all relative px-4 lg:pl-[42px];
     }
 
     .sidebar-label {
