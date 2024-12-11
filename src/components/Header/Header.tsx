@@ -2,6 +2,7 @@ import { FC, useEffect } from "react";
 import Logo from "@/components/Logo";
 import { useLocation } from "react-router";
 import { SidebarLink } from "@/constants";
+import { SearchBar } from "@/components/SearchBar";
 
 type Props = {
   links: SidebarLink[];
@@ -26,8 +27,12 @@ export const Header: FC<Props> = ({ links }) => {
     <header className="w-full h-[100px] flex items-center">
       <Logo />
 
-      <section className="px-[40px] h-full flex-1 flex items-center">
+      <section className="px-[40px] h-full flex-1 flex items-center justify-between">
         <h1 className="text-28 font-extrabold text-blue-900">{pageTitle}</h1>
+
+        <section>
+          <SearchBar />
+        </section>
       </section>
     </header>
   );

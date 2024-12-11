@@ -108,6 +108,10 @@
         @apply text-[14px] leading-[20px];
     }
 
+    .text-15 {
+        @apply text-[15px] leading-[22px];
+    }
+
     .text-16 {
         @apply text-[16px] leading-[24px];
     }
