@@ -124,6 +124,10 @@
         @apply text-[20px] leading-[24px];
     }
 
+    .text-22 {
+        @apply text-[24px] leading-[30px];
+    }
+
     .text-24 {
         @apply text-[24px] leading-[30px];
     }
@@ -144,6 +148,15 @@
         @apply text-[36px] leading-[44px];
     }
 
+    .dark-gradient-1 {
+        background: linear-gradient(107.38deg, #5B5A6F 2.61%, #000000 101.2%);
+    }
+
+    .dark-gradient-2 {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+
     /* Logo */
     .main-logo {
         @apply transition-all flex items-center gap-4 px-3 lg:w-[250px]
@@ -153,6 +166,7 @@
     .main-logo-label {
         @apply max-lg:hidden;
     }
+
     /* SearchBar */
     .search-bar-input {
         @apply w-[255px] h-[50px] pl-16 rounded-[40px] bg-blue-200
@@ -175,5 +189,22 @@
 
     .sidebar-label {
         @apply text-18 font-medium text-gray-300 max-lg:hidden;
+    }
+
+    .bank-card {
+        @apply relative flex h-[235px] w-[350px] max-w-[350px] justify-between
+        rounded-[20px] border border-white overflow-hidden;
+    }
+
+    .bank-card_content {
+        @apply relative z-10 flex size-full flex-col justify-between rounded-l-[20px] bg-gray-700 dark-gradient-1;
+    }
+
+    .bank-card_info {
+        @apply px-6 pt-6;
+    }
+
+    .bank-card_number {
+        @apply px-6 h-[70px] flex items-center justify-between gap-2 dark-gradient-2;
     }
 }
