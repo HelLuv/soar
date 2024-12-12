@@ -1,6 +1,6 @@
 import { PieLabelRenderProps } from "recharts";
 
-export const renderCustomizedLabel = (props: PieLabelRenderProps) => {
+export const renderCustomizedPieChartLabel = (props: PieLabelRenderProps, valuePostfix = "") => {
   const { cx = 0, cy = 0, midAngle = 0, innerRadius = 0, outerRadius = 0, payload } = props;
   const value = payload.value as number;
   const name = payload.name as string;
@@ -23,7 +23,7 @@ export const renderCustomizedLabel = (props: PieLabelRenderProps) => {
       fontSize={14}
       fontWeight={700}
     >
-      <tspan x={x} dy="-0.5em" fontSize={18}>{`${value}%`}</tspan>
+      <tspan x={x} dy="-0.5em" fontSize={18}>{`${value}${valuePostfix}`}</tspan>
       <tspan x={x} dy="1.2em">
         {name}
       </tspan>
