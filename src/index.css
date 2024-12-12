@@ -192,12 +192,12 @@
     }
 
     .bank-card {
-        @apply relative flex h-[235px] w-[350px] max-w-[350px] justify-between
-        rounded-[20px] border border-white overflow-hidden;
+        @apply relative flex flex-col h-[235px] w-[350px] max-w-[350px] justify-between
+        rounded-[20px] border overflow-hidden font-normal;
     }
 
     .bank-card_content {
-        @apply relative z-10 flex size-full flex-col justify-between rounded-l-[20px] bg-gray-700 dark-gradient-1;
+        @apply relative z-10 flex size-full flex-col justify-between rounded-l-[20px];
     }
 
     .bank-card_info {
