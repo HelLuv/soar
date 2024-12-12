@@ -17,10 +17,7 @@ export const BankCard: FC<Props> = ({ account, variant = "dark" }) => {
   const currentStyle = variantStyles[variant];
 
   return (
-    <NavLink
-      to={`/transactions/?id=${account.id}`}
-      className={cn("bank-card", currentStyle.container)}
-    >
+    <NavLink to={`/credit-cards/${account.id}`} className={cn("bank-card", currentStyle.container)}>
       <div className="bank-card_content">
         <div className="bank-card_info">
           <div className="flex justify-between mb-8">
@@ -66,8 +63,8 @@ const variantStyles = {
   },
   light: {
     container: "text-black bg-white border-[#DFEAF2]",
-    balanceLabel: "text-[#718EBF]",
-    detailLabel: "text-[#718EBF]",
+    balanceLabel: "text-blue-400",
+    detailLabel: "text-blue-400",
     cardNumber: "border-t border-[#DFEAF2]",
     masterCardIcon: "brightness-50",
     chipImage: "brightness-[25%]",

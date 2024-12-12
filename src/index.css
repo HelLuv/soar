@@ -52,6 +52,8 @@
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
+
+        --header-height: 100px;
     }
 
     .dark {
@@ -156,6 +158,13 @@
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
     }
 
+    .h-screen-minus-header {
+        height: calc(100vh - var(--header-height));
+    }
+
+    .main-layout_content {
+        @apply flex-1 border-t border-gray-200 pt-[30px] px-[40px] bg-blue-200;
+    }
 
     /* Logo */
     .main-logo {
@@ -173,9 +182,10 @@
         placeholder:text-[#8BA3CB] text-15;
     }
 
+
     /* Sidebar */
     .sidebar {
-        @apply transition-all flex h-screen w-fit flex-col justify-between border-r border-gray-200 bg-white
+        @apply transition-all flex h-screen-minus-header w-fit flex-col justify-between border-r border-gray-200 bg-white
         pt-[30px] lg:w-[250px] max-sm:hidden;
     }
 
@@ -197,7 +207,7 @@
     }
 
     .bank-card_content {
-        @apply relative z-10 flex size-full flex-col justify-between rounded-l-[20px];
+        @apply relative z-10 flex size-full flex-col justify-between;
     }
 
     .bank-card_info {

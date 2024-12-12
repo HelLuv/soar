@@ -7,6 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
+        green: {
+          300: "#41D4A8",
+        },
+        red: {
+          300: "#FF4B4A",
+        },
         success: {
           25: "#F6FEF9",
           50: "#ECFDF3",
@@ -19,6 +25,7 @@ export default {
           25: "#F5FAFF",
           100: "#D1E9FF",
           200: "#F5F7FA",
+          400: "#718EBF",
           500: "#2E90FA",
           600: "#1570EF",
           700: "#175CD3",

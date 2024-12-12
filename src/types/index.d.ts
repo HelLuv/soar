@@ -12,3 +12,25 @@ export type Account = {
   subtype: string;
   validityDate: string;
 };
+
+export type CurrencyCode = "USD" | "EUR";
+
+export type Currency = {
+  code: CurrencyCode;
+  symbol: string;
+};
+
+export type TransactionType = "deposit" | "withdrawal";
+export type TransactionSource = "card" | "paypal" | "deposit" | "withdrawal";
+
+export type Transaction = {
+  id: string;
+  amount: number;
+  date: string;
+  description: string;
+  icon: string;
+  currency: Currency;
+  accountNumber;
+  type: TransactionType;
+  source: TransactionSource;
+};
