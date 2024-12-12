@@ -163,7 +163,7 @@
     }
 
     .main-layout_content {
-        @apply flex-1 border-t border-gray-200 pt-[30px] px-[40px] bg-blue-200;
+        @apply flex-1 border-t border-gray-200 py-[30px] px-[40px] bg-blue-200;
     }
 
     /* Logo */

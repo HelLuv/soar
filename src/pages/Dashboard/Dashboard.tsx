@@ -1,5 +1,6 @@
 import { FC } from "react";
 import {
+  BalanceHistory,
   BankCards,
   ExpenseStatistics,
   RecentTransactions,
@@ -9,6 +10,7 @@ import { accounts } from "@/mock/accounts";
 import { transactions } from "@/mock/transactions";
 import { weeklyActivity } from "@/mock/weekly-activity";
 import { expenseStatistics } from "@/mock/expense-statistics";
+import { balanceHistory } from "@/mock/balance-history";
 
 const Dashboard: FC = () => {
   return (
@@ -21,6 +23,10 @@ const Dashboard: FC = () => {
       <div className="flex gap-8">
         <WeeklyActivity data={weeklyActivity} />
         <ExpenseStatistics data={expenseStatistics} />
+      </div>
+
+      <div className="flex gap-8">
+        <BalanceHistory data={balanceHistory} />
       </div>
     </section>
   );

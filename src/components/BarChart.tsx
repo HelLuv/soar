@@ -9,7 +9,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { getDayOfWeek } from "@/lib/format/getDayOfWeek";
+import { getDayOfWeek } from "@/lib/format";
 
 export type BarType = {
   key: string;
