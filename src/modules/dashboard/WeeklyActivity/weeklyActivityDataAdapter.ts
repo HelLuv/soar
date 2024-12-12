@@ -5,7 +5,7 @@ import { Activity } from "@/types";
 
 type BarProps = ComponentProps<typeof Bar>;
 
-export const weeklyActivityBarAdapter = (data: Activity[]) => {
+export const weeklyActivityDataAdapter = (data: Activity[]) => {
   const barData: BarProps["data"] = {
     datasets: [
       {
@@ -41,6 +41,9 @@ export const weeklyActivityBarAdapter = (data: Activity[]) => {
             size: 15,
           },
         },
+      },
+      datalabels: {
+        display: false,
       },
     },
     scales: {

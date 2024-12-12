@@ -3,7 +3,7 @@ import { Bar } from "react-chartjs-2";
 import { BarElement, CategoryScale, Chart, Legend, LinearScale, Tooltip } from "chart.js";
 import { Section } from "@/components/ui/section";
 import { Activity } from "@/types";
-import { weeklyActivityBarAdapter } from "./weeklyActivityBarAdapter";
+import { weeklyActivityDataAdapter } from "./weeklyActivityDataAdapter";
 
 Chart.register(Tooltip, Legend, CategoryScale, LinearScale, BarElement);
 
@@ -12,7 +12,7 @@ type Props = {
 };
 
 export const WeeklyActivity: FC<Props> = ({ data = [] }) => {
-  const { barData, options } = weeklyActivityBarAdapter(data);
+  const { barData, options } = weeklyActivityDataAdapter(data);
 
   return (
     <Section title="Weekly Activity">

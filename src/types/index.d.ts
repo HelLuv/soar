@@ -41,3 +41,10 @@ export type Activity = {
   deposit: number;
   withdraw: number;
 };
+
+export type Expense = {
+  id: string;
+  percentage: number;
+  name: string;
+  color: string;
+};
