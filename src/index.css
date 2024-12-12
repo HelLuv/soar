@@ -186,7 +186,7 @@
     /* Sidebar */
     .sidebar {
         @apply transition-all flex h-screen-minus-header w-fit flex-col justify-between border-r border-gray-200 bg-white
-        pt-[30px] lg:w-[250px] max-sm:hidden;
+        pt-[30px] lg:w-[250px] lg:min-w-[250px] max-sm:hidden;
     }
 
     .sidebar-active-indicator {
@@ -201,9 +201,10 @@
         @apply text-18 font-medium text-gray-300 max-lg:hidden;
     }
 
+    /* Bank card */
     .bank-card {
         @apply relative flex flex-col h-[235px] w-[350px] max-w-[350px] justify-between
-        rounded-[20px] border overflow-hidden font-normal;
+        rounded-[25px] border overflow-hidden font-normal;
     }
 
     .bank-card_content {

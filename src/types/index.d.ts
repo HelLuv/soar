@@ -34,3 +34,10 @@ export type Transaction = {
   type: TransactionType;
   source: TransactionSource;
 };
+
+export type Activity = {
+  id: string;
+  date: string;
+  deposit: number;
+  withdraw: number;
+};

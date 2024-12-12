@@ -15,7 +15,7 @@ export const Transaction: FC<Props> = ({ transaction }) => {
   return (
     <NavLink
       to={`/transactions/${id}`}
-      className="bg-white rounded-[20px] flex items-center justify-between font-medium text-16"
+      className="flex items-center justify-between font-medium text-16"
     >
       <div className="flex items-center gap-4">
         <div className={cn("w-[55px] h-[55px] rounded-full flex-center", iconVariants[source])}>
