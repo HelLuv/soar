@@ -44,7 +44,7 @@ export type Activity = {
 
 export type Expense = {
   id: string;
-  percentage: number;
+  value: number;
   name: string;
-  color: string;
+  fill: string;
 };

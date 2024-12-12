@@ -10,8 +10,8 @@ export const expenseStatisticsDataAdapter = (data: Expense[]) => {
     datasets: [
       {
         label: " ",
-        data: data.map((item) => item.percentage),
-        backgroundColor: data.map((item) => item.color),
+        data: data.map((item) => item.value),
+        backgroundColor: data.map((item) => item.fill),
         borderColor: "#fff",
         hoverOffset: 20,
         offset: 10,
