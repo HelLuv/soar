@@ -59,4 +59,13 @@ export type User = {
   fullName: string;
   description: string;
   imageUrl: string;
+  city: string;
+  country: string;
+  dateOfBirth: string;
+  email: string;
+  password: string;
+  permanentAddress: string;
+  postalCode: string;
+  presentAddress: string;
+  username: string;
 };
