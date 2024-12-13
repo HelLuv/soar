@@ -3,6 +3,7 @@ import {
   BalanceHistory,
   BankCards,
   ExpenseStatistics,
+  QuickTransfer,
   RecentTransactions,
   WeeklyActivity,
 } from "@/modules/dashboard";
@@ -11,6 +12,7 @@ import { transactions } from "@/mock/transactions";
 import { weeklyActivity } from "@/mock/weekly-activity";
 import { expenseStatistics } from "@/mock/expense-statistics";
 import { balanceHistory } from "@/mock/balance-history";
+import { users } from "@/mock/users";
 
 const Dashboard: FC = () => {
   return (
@@ -26,6 +28,7 @@ const Dashboard: FC = () => {
       </div>
 
       <div className="flex gap-8">
+        <QuickTransfer users={users} />
         <BalanceHistory data={balanceHistory} />
       </div>
     </section>

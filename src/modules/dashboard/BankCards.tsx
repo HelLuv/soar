@@ -19,7 +19,7 @@ export const BankCards: FC<Props> = ({ accounts }) => {
       }
     >
       <div className="flex gap-8">
-        {accounts.length && <BankCard account={accounts[0]} variant="dark" />}
+        {accounts.length > 0 && <BankCard account={accounts[0]} variant="dark" />}
         {accounts[1] && <BankCard account={accounts[1]} variant="light" />}
       </div>
     </Section>

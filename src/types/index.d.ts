@@ -48,3 +48,15 @@ export type Expense = {
   name: string;
   fill: string;
 };
+
+export type Balance = {
+  date: string;
+  value: number;
+};
+
+export type User = {
+  id: string;
+  fullName: string;
+  description: string;
+  imageUrl: string;
+};

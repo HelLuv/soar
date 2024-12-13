@@ -73,8 +73,9 @@ export const BarChart: FC<Props> = ({
           verticalAlign="top"
           content={<ChartLegendContent className="justify-end text-blue-400 text-[16px]" />}
         />
+
         {bars.map((bar) => (
-          <Bar dataKey={bar.key} fill={bar.fill} radius={10} barSize={barSize} />
+          <Bar dataKey={bar.key} fill={bar.fill} radius={10} barSize={barSize} key={bar.key} />
         ))}
       </ReBarChart>
     </ChartContainer>
