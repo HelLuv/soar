@@ -61,7 +61,7 @@ export type User = {
   imageUrl: string;
   city: string;
   country: string;
-  dateOfBirth: string;
+  dateOfBirth: Date;
   email: string;
   password: string;
   permanentAddress: string;

@@ -21,9 +21,9 @@ export const profileFormSchema = z.object({
   }).min(8, {
     message: "Password must be at least 8 characters",
   }),
-  dateOfBirth: z.string({
+  dateOfBirth: z.date({
     required_error: "Date of Birth is required",
-  }).min(10),
+  }),
   presentAddress: z.string({
     required_error: "Present Address is required",
   }).min(5, {

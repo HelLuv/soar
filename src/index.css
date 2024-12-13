@@ -244,8 +244,8 @@
     }
 
     .input-class {
-        @apply !text-[16px] placeholder:text-15 py-4 px-5 h-[50px] rounded-2xl
-        border border-[#DFEAF2] text-[#718EBF] placeholder:text-gray-500;
+        @apply !text-[16px] font-normal text-[#718EBF] placeholder:text-15 py-4 px-5 h-[50px] rounded-2xl
+        border border-[#DFEAF2] placeholder:text-gray-500;
     }
 
     .form-item {
