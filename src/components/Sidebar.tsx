@@ -13,7 +13,7 @@ export const Sidebar: FC<Props> = ({ links }) => {
   return (
     <section className="sidebar">
       <nav>
-        <ul className="flex flex-col gap-4">
+        <ul className="flex flex-col gap-6">
           {links.map(({ route, label, Icon }) => {
             const isActive = pathname === route || pathname.startsWith(`${route}/`);
             return (
