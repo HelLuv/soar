@@ -27,16 +27,15 @@ export const App: FC = () => {
               </Suspense>
             }
           />
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <NotFound />
+              </Suspense>
+            }
+          />
         </Route>
-
-        <Route
-          path="*"
-          element={
-            <Suspense fallback={<div>Loading...</div>}>
-              <NotFound />
-            </Suspense>
-          }
-        />
       </Routes>
     </BrowserRouter>
   );
