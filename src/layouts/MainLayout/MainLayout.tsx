@@ -11,7 +11,7 @@ const MainLayout: FC = () => (
     <div className="flex">
       <Sidebar links={SIDEBAR_LINKS} />
 
-      <div className="flex-1 border-t border-gray-200">
+      <div className="main-layout_content">
         <Outlet />
       </div>
     </div>
