@@ -162,6 +162,10 @@
         height: calc(100vh - var(--header-height));
     }
 
+    .h-main-layout-content {
+        height: calc(100vh - var(--header-height) - 80px);
+    }
+
     .main-layout_content {
         @apply flex-1 border-t border-gray-200 py-[30px] px-[40px] bg-blue-200 h-screen-minus-header overflow-auto;
     }
@@ -217,5 +221,47 @@
 
     .bank-card_number {
         @apply px-6 h-[70px] flex items-center justify-between gap-2 dark-gradient-2;
+    }
+
+    .not-found {
+        @apply flex flex-col items-center justify-center h-screen  text-gray-800 h-main-layout-content;
+    }
+
+    /* Tabs */
+    .active-tab {
+        position: relative;
+    }
+
+    .active-tab::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .input-class {
+        @apply !text-[16px] placeholder:text-15 py-4 px-5 h-[50px] rounded-2xl
+        border border-[#DFEAF2] text-[#718EBF] placeholder:text-gray-500;
+    }
+
+    .form-item {
+        @apply flex flex-col;
+    }
+
+    .form-label {
+        @apply text-16 w-full max-w-[280px] font-normal text-[#232323];
+    }
+
+    /* EditProfileForm */
+    .edit-profile-form {
+        @apply w-full flex flex-wrap gap-x-8 gap-y-5;
+    }
+
+    .edit-profile-form_item {
+        @apply basis-[calc(50%-16px)];
     }
 }
