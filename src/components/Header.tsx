@@ -5,7 +5,6 @@ import { SidebarLink } from "@/constants";
 import { SearchBar } from "@/components/SearchBar";
 import SettingsIcon from "@/assets/icons/outlined/settings.svg?react";
 import NotificationIcon from "@/assets/icons/outlined/notification.svg?react";
-import UserImage from "@/assets/images/user-0.png";
 
 type Props = {
   links: SidebarLink[];
@@ -60,7 +59,7 @@ export const Header: FC<Props> = ({ links }) => {
             title="Open account quick settings"
             className="cursor-pointer size-[60px] flex-center rounded-full"
           >
-            <img src={UserImage} alt="user image" />
+            <img src="/images/user-0.png" alt="user image" />
           </span>
         </section>
       </section>

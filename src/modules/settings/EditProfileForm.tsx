@@ -6,6 +6,7 @@ import { profileFormSchema, ProfileFormSchema } from "@/schemas/profileFormSchem
 import { FormInput } from "@/components/FormInput";
 import { User } from "@/types";
 import { FC } from "react";
+import { FormDatePicker } from "@/components/FormDatePicker";
 
 type Props = {
   userData: User;
@@ -59,7 +60,7 @@ export const EditProfileForm: FC<Props> = ({ userData }) => {
           className="edit-profile-form_item"
           required
         />
-        <FormInput<ProfileFormSchema>
+        <FormDatePicker<ProfileFormSchema>
           control={form.control}
           name="dateOfBirth"
           label="Date of Birth"
