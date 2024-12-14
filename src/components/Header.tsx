@@ -27,16 +27,16 @@ export const Header: FC<Props> = ({ links }) => {
   }, [pageTitle]);
 
   return (
-    <header className="w-full h-[100px] flex items-center">
+    <header className="w-full h-[100px] max-sm:h-[140px] flex items-center">
       <Logo className="max-sm:hidden" />
 
-      <section className="header">
+      <section className="header flex-wrap">
         <MobileNav links={links} />
 
         <h1 className="header-title">{pageTitle}</h1>
 
         <section className="flex gap-[30px] items-center">
-          <SearchBar />
+          <SearchBar className="max-sm:hidden" />
 
           {/* either go to settings page or quick settings popup */}
           <NavLink
@@ -60,11 +60,13 @@ export const Header: FC<Props> = ({ links }) => {
           <span
             aria-label="Accounts"
             title="Open account quick settings"
-            className="cursor-pointer size-[60px] flex-center rounded-full"
+            className="cursor-pointer size-[60px] max-sm:size-[35px] flex-center rounded-full"
           >
             <img src="/images/user-0.png" alt="user image" />
           </span>
         </section>
+
+        <SearchBar className="sm:hidden block w-full -mt-4" />
       </section>
     </header>
   );

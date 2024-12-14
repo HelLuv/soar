@@ -14,10 +14,10 @@ export const MobileNav: FC<Props> = ({ links }) => {
   const { pathname } = useLocation();
 
   return (
-    <section className="w-fit h-[30px] sm:hidden">
+    <section className="w-fit h-5 sm:hidden">
       <Sheet>
         <SheetTrigger>
-          <HamburgerIcon className="cursor-pointer w-[30px] h-[30px]" />
+          <HamburgerIcon className="cursor-pointer size-5" />
         </SheetTrigger>
 
         <SheetContent side="left" className="border-none bg-white pl-0 w-[300px]">
