@@ -82,6 +82,12 @@
         --chart-4: 280 65% 60%;
         --chart-5: 340 75% 55%;
     }
+
+    @media (max-width: 768px) {
+        :root {
+            --header-height: 140px;
+        }
+    }
 }
 
 @layer utilities {
@@ -150,6 +156,15 @@
         @apply text-[36px] leading-[44px];
     }
 
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hidden {
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox */
+    }
+
     .dark-gradient-1 {
         background: linear-gradient(107.38deg, #5B5A6F 2.61%, #000000 101.2%);
     }
@@ -167,7 +182,7 @@
     }
 
     .main-layout_content {
-        @apply flex-1 border-t border-gray-200 py-[30px] px-[40px] bg-blue-200 h-screen-minus-header overflow-auto;
+        @apply flex-1 border-t border-gray-200 py-[30px] px-[40px] max-md:p-[25px] bg-blue-200 h-screen-minus-header overflow-auto;
     }
 
     /* Logo */
@@ -228,7 +243,7 @@
 
     /* Bank card */
     .bank-card {
-        @apply relative flex flex-col h-[235px] w-[350px] max-w-[350px] justify-between
+        @apply relative flex flex-col h-[235px] min-w-[350px] max-w-[350px] justify-between
         rounded-[25px] border overflow-hidden font-normal;
     }
 
@@ -242,6 +257,11 @@
 
     .bank-card_number {
         @apply px-6 h-[70px] flex items-center justify-between gap-2 dark-gradient-2;
+    }
+
+    /* BankCards */
+    .bank-cards-wrapper {
+        @apply w-full overflow-x-auto flex gap-8 max-2xl:gap-4 scrollbar-hidden;
     }
 
     /* Transaction */

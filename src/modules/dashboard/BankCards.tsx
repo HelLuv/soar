@@ -13,12 +13,13 @@ export const BankCards: FC<Props> = ({ accounts }) => {
     <Section
       title="My Cards"
       extra={
-        <NavLink to="/credit-cards" className="text-blue-800 text-18 font-semibold">
+        <NavLink to="/credit-cards" className="text-blue-800 text-18 font-semibold max-md:text-14">
           See all
         </NavLink>
       }
+      className="max-lg:w-full"
     >
-      <div className="flex gap-8 max-2xl:gap-4">
+      <div className="bank-cards-wrapper">
         {accounts.length > 0 && <BankCard account={accounts[0]} variant="dark" />}
         {accounts[1] && <BankCard account={accounts[1]} variant="light" />}
       </div>

@@ -13,7 +13,7 @@ export const RecentTransactions: FC<Props> = ({ transactions = [], className }) 
   return (
     <Section
       title="Recent Transactions"
-      className={cn("w-[350px] min-w-[350px] h-[285px] ", className)}
+      className={cn("w-[350px] min-w-[350px] h-[285px] max-md:w-full", className)}
     >
       <div className="px-4 py-6 bg-white rounded-[25px] flex flex-col gap-[10px]">
         {transactions.slice(0, 3).map((transaction) => (

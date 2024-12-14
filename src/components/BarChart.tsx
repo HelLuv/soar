@@ -35,7 +35,12 @@ export const BarChart: FC<Props> = ({
 }) => {
   return (
     <ChartContainer config={chartConfig} className="max-h-[322px] w-full">
-      <ReBarChart accessibilityLayer data={data} barGap={barGap}>
+      <ReBarChart accessibilityLayer data={data} barGap={barGap} margin={{
+        top: 0,
+        right: 0,
+        left: -20,
+        bottom: -10,
+      }}>
         <CartesianGrid stroke="#F3F3F5" horizontal={true} vertical={false} />
         <XAxis
           dataKey="date"
