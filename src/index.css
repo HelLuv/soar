@@ -244,7 +244,7 @@
     }
 
     .input-class {
-        @apply !text-[16px] font-normal text-[#718EBF] placeholder:text-15 py-4 px-5 h-[50px] rounded-2xl
+        @apply !text-[16px] font-normal text-[#718EBF] placeholder:text-15 py-4 px-5 h-[50px] !rounded-2xl
         border border-[#DFEAF2] placeholder:text-gray-500;
     }
 
