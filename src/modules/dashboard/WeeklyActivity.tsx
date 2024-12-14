@@ -24,7 +24,7 @@ export const WeeklyActivity: FC<Props> = ({ data = [], sectionClassName, wrapper
 
   return (
     <Section title="Weekly Activity" className={sectionClassName}>
-      <div className={cn("p-6 bg-white rounded-[25px] w-[730px] h-[370px] max-md:h-[250px]", wrapperClassName)}>
+      <div className={cn("p-6 bg-white rounded-[25px] w-[730px] h-[370px] max-md:w-full max-md:h-[250px]", wrapperClassName)}>
         <BarChart
           data={data}
           chartConfig={chartConfig}

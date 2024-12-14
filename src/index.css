@@ -270,6 +270,11 @@
         px-2 transition-all duration-200 rounded-l hover:bg-gray-100;
     }
 
+    /* Quick transfer */
+    .quick-transfer {
+        @apply p-8 bg-white rounded-[25px] w-[440px] h-[270px] max-md:w-full max-md:h-[200px] max-md:p-4 flex flex-col justify-between
+    }
+
     /* Not found */
     .not-found {
         @apply flex flex-col items-center justify-center h-screen  text-gray-800 h-main-layout-content;

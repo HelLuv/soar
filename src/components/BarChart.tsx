@@ -34,7 +34,7 @@ export const BarChart: FC<Props> = ({
   bars = [],
 }) => {
   return (
-    <ChartContainer config={chartConfig} className="max-h-[322px] w-full">
+    <ChartContainer config={chartConfig} className="max-h-[322px] max-md:max-h-[202px] w-full">
       <ReBarChart accessibilityLayer data={data} barGap={barGap} margin={{
         top: 0,
         right: 0,
