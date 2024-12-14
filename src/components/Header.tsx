@@ -1,10 +1,11 @@
 import { FC, useEffect } from "react";
 import Logo from "@/components/Logo";
 import { NavLink, useLocation } from "react-router";
-import { SidebarLink } from "@/constants";
-import { SearchBar } from "@/components/SearchBar";
-import SettingsIcon from "@/assets/icons/outlined/settings.svg?react";
 import NotificationIcon from "@/assets/icons/outlined/notification.svg?react";
+import SettingsIcon from "@/assets/icons/outlined/settings.svg?react";
+import { SidebarLink } from "@/constants";
+import { SearchBar } from "./SearchBar";
+import { MobileNav } from "./MobileNav";
 
 type Props = {
   links: SidebarLink[];
@@ -26,14 +27,16 @@ export const Header: FC<Props> = ({ links }) => {
   }, [pageTitle]);
 
   return (
-    <header className="w-full h-[100px] flex items-center">
-      <Logo />
+    <header className="w-full h-[100px] max-sm:h-[140px] flex items-center">
+      <Logo className="max-sm:hidden" />
 
-      <section className="px-[40px] max-lg:px-5 h-full flex-1 flex items-center justify-between">
-        <h1 className="text-28 font-extrabold text-blue-900">{pageTitle}</h1>
+      <section className="header flex-wrap">
+        <MobileNav links={links} />
+
+        <h1 className="header-title">{pageTitle}</h1>
 
         <section className="flex gap-[30px] items-center">
-          <SearchBar />
+          <SearchBar className="max-sm:hidden" />
 
           {/* either go to settings page or quick settings popup */}
           <NavLink
@@ -57,11 +60,13 @@ export const Header: FC<Props> = ({ links }) => {
           <span
             aria-label="Accounts"
             title="Open account quick settings"
-            className="cursor-pointer size-[60px] flex-center rounded-full"
+            className="cursor-pointer size-[60px] max-sm:size-[35px] flex-center rounded-full"
           >
             <img src="/images/user-0.png" alt="user image" />
           </span>
         </section>
+
+        <SearchBar className="sm:hidden block w-full -mt-4" />
       </section>
     </header>
   );

@@ -1,6 +1,7 @@
 import { FC, lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 import MainLayout from "@/layouts/MainLayout";
+import { PageLoading } from "@/components/PageLoading";
 
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
 const Settings = lazy(() => import("@/pages/Settings"));
@@ -14,7 +15,7 @@ export const App: FC = () => {
           <Route
             index
             element={
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<PageLoading />}>
                 <Dashboard />
               </Suspense>
             }
@@ -22,7 +23,7 @@ export const App: FC = () => {
           <Route
             path="settings"
             element={
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<PageLoading />}>
                 <Settings />
               </Suspense>
             }
@@ -30,7 +31,7 @@ export const App: FC = () => {
           <Route
             path="*"
             element={
-              <Suspense fallback={<div>Loading...</div>}>
+              <Suspense fallback={<PageLoading />}>
                 <NotFound />
               </Suspense>
             }
