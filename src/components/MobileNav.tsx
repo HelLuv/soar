@@ -1,10 +1,19 @@
 import { FC } from "react";
 import { NavLink, useLocation } from "react-router";
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { SidebarLink } from "@/constants";
 import { cn } from "@/lib/utils";
 import HamburgerIcon from "@/assets/icons/outlined/hamburger.svg?react";
 import Logo from "@/components/Logo";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 type Props = {
   links: SidebarLink[];
@@ -22,10 +31,10 @@ export const MobileNav: FC<Props> = ({ links }) => {
 
         <SheetContent side="left" className="border-none bg-white pl-0 w-[300px]">
           <SheetClose asChild>
-            <NavLink to="/" className="cursor-pointer flex items-center gap-1 px-4">
+            <div className="cursor-pointer flex items-center gap-1 px-4">
               <Logo />
               <h1 className="text-26 font-extrabold text-blue-900">Soar Task</h1>
-            </NavLink>
+            </div>
           </SheetClose>
 
           <SheetClose asChild>
@@ -55,6 +64,14 @@ export const MobileNav: FC<Props> = ({ links }) => {
               })}
             </nav>
           </SheetClose>
+
+          {/* For accessibility */}
+          <VisuallyHidden>
+            <SheetHeader>
+              <SheetTitle>MobileNav</SheetTitle>
+              <SheetDescription>MobileNav</SheetDescription>
+            </SheetHeader>
+          </VisuallyHidden>
         </SheetContent>
       </Sheet>
     </section>
