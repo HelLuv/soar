@@ -26,17 +26,17 @@ export const User: FC<Props> = memo(({ user, active, onClick, clickable = true }
       onClick={handleOnClick}
     >
       <div
-        className={cn("size-[70px] rounded-full border-2 transition-all", {
+        className={cn("size-[70px] rounded-full border-2 transition-all max-md:size-[50px]", {
           "border-[#718EBF]": active,
         })}
       >
         <img src={imageUrl} alt={`${fullName} avatar`} />
       </div>
 
-      <h3 className={cn("text-16 text-[#232323] transition-all", { "font-bold": active })}>
+      <h3 className={cn("text-16 text-[#232323] transition-all max-md:text-12", { "font-bold": active })}>
         {fullName}
       </h3>
-      <span className={cn("text-15 text-[#718EBF] transition-all", { "font-bold": active })}>
+      <span className={cn("text-15 text-[#718EBF] transition-all max-md:text-12", { "font-bold": active })}>
         {description}
       </span>
     </div>

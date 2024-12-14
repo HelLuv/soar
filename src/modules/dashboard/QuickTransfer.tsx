@@ -25,29 +25,29 @@ export const QuickTransfer: FC<Props> = ({ users = [] }) => {
   };
 
   return (
-    <Section title="Quick Transfer">
-      <div className="p-8 bg-white rounded-[25px] w-[440px] h-[270px] flex flex-col justify-between">
+    <Section title="Quick Transfer" className="max-md:w-full">
+      <div className="quick-transfer">
         <Carousel className="w-full px-8 flex" opts={{ loop: true }}>
           <CarouselContent>
             {users.map((user) => (
-              <CarouselItem className="md:basis-1/3 lg:basis-1/3" key={user.id}>
+              <CarouselItem className="basis-1/3 max-md:basis-1/4 max-sm:basis-1/3" key={user.id}>
                 <User user={user} active={selectedUser.id === user.id} onClick={handleUserClick} />
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="-left-4 top-1/4 size-[40px]" title="Previous Users" />
-          <CarouselNext className="-right-4 top-1/4 size-[40px]" title="Next Users" />
+          <CarouselPrevious className="-left-4 top-1/3 size-[40px] max-md:-left-0 max-sm:-left-2 max-md:top-1/2" title="Previous Users" />
+          <CarouselNext className="-right-4 top-1/3 size-[40px] max-md:right-0 max-sm:-right-2  max-md:top-1/2" title="Next Users" />
         </Carousel>
 
-        <div className="flex items-center gap-7 text-[16px] relative">
+        <div className="flex items-center gap-7 text-[16px] justify-end relative">
           <span className="text-nowrap text-[#718EBF]">Write Amount</span>
           <Input
             className="h-[50px] rounded-[50px] bg-[#EDF1F7] pl-[20px]
-           pr-[145px] py-[15px] text-[#718EBF]"
+           pr-[145px] py-[15px] text-[#718EBF] max-w-[265px]"
           />
           <Button
             className="w-[125px] h-[50px] rounded-[50px] absolute z-10 right-0
-            bg-[#232323]  hover:bg-black text-white"
+            bg-[#232323] hover:bg-black text-white"
           >
             <span>Send</span> <SendIcon className="!size-6 ml-1" />
           </Button>
