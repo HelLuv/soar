@@ -1,12 +1,14 @@
 import React, { FC, useState } from "react";
 import SearchIcon from "@/assets/icons/outlined/search.svg?react";
 import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 
 type Props = {
   onSubmit?: (value: string) => void;
+  className?: string;
 };
 
-export const SearchBar: FC<Props> = ({ onSubmit }) => {
+export const SearchBar: FC<Props> = ({ onSubmit, className }) => {
   const [searchValue, setSearchValue] = useState("");
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,7 +26,7 @@ export const SearchBar: FC<Props> = ({ onSubmit }) => {
   };
 
   return (
-    <div className="relative">
+    <div className={cn("search-bar", className)}>
       <SearchIcon className="absolute left-6 top-4" />
       <Input
         onKeyDown={handleKeyDown}
