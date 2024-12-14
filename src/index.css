@@ -82,6 +82,12 @@
         --chart-4: 280 65% 60%;
         --chart-5: 340 75% 55%;
     }
+
+    @media (max-width: 768px) {
+        :root {
+            --header-height: 140px;
+        }
+    }
 }
 
 @layer utilities {
@@ -150,6 +156,15 @@
         @apply text-[36px] leading-[44px];
     }
 
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hidden {
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox */
+    }
+
     .dark-gradient-1 {
         background: linear-gradient(107.38deg, #5B5A6F 2.61%, #000000 101.2%);
     }
@@ -167,25 +182,37 @@
     }
 
     .main-layout_content {
-        @apply flex-1 border-t border-gray-200 py-[30px] px-[40px] bg-blue-200 h-screen-minus-header overflow-auto;
+        @apply flex-1 border-t border-gray-200 py-[30px] px-[40px] max-md:p-[25px] bg-blue-200 h-screen-minus-header overflow-auto;
     }
 
     /* Logo */
     .main-logo {
         @apply transition-all flex items-center gap-4 px-3 lg:w-[250px]
-        border-r border-gray-200 h-full lg:pl-[44px] max-sm:hidden;
+        border-r border-gray-200 h-full lg:pl-[44px];
     }
 
     .main-logo-label {
         @apply max-lg:hidden;
     }
 
-    /* SearchBar */
-    .search-bar-input {
-        @apply w-[255px] h-[50px] pl-16 rounded-[40px] bg-blue-200
-        placeholder:text-[#8BA3CB] text-15;
+    /* Header */
+    .header {
+        @apply px-[40px] max-lg:px-5 h-full flex-1 flex items-center justify-between;
     }
 
+    .header-title {
+        @apply text-28 font-extrabold text-blue-900 max-md:text-24 max-sm:text-20 max-sm:font-semibold;
+    }
+
+    /* SearchBar */
+    .search-bar {
+        @apply relative;
+    }
+
+    .search-bar-input {
+        @apply w-[255px] h-[50px] pl-16 rounded-[40px] bg-blue-200
+        placeholder:text-[#8BA3CB] text-15 max-sm:w-full;
+    }
 
     /* Sidebar */
     .sidebar {
@@ -205,9 +232,18 @@
         @apply text-18 font-medium text-gray-300 max-lg:hidden;
     }
 
+    /* Mobile nav */
+    .mobilenav-label {
+        @apply text-16 font-semibold text-gray-300;
+    }
+
+    .mobilenav-sheet_close {
+        @apply flex gap-3 items-center p-4 rounded-lg w-full max-w-60;
+    }
+
     /* Bank card */
     .bank-card {
-        @apply relative flex flex-col h-[235px] w-[350px] max-w-[350px] justify-between
+        @apply relative flex flex-col h-[235px] min-w-[350px] max-w-[350px] justify-between
         rounded-[25px] border overflow-hidden font-normal;
     }
 
@@ -223,6 +259,23 @@
         @apply px-6 h-[70px] flex items-center justify-between gap-2 dark-gradient-2;
     }
 
+    /* BankCards */
+    .bank-cards-wrapper {
+        @apply w-full overflow-x-auto flex gap-8 max-2xl:gap-4 scrollbar-hidden;
+    }
+
+    /* Transaction */
+    .transaction {
+        @apply flex items-center justify-between font-medium text-16
+        px-2 transition-all duration-200 rounded-l hover:bg-gray-100;
+    }
+
+    /* Quick transfer */
+    .quick-transfer {
+        @apply p-8 bg-white rounded-[25px] w-[440px] h-[270px] max-md:w-full max-md:h-[200px] max-md:p-4 flex flex-col justify-between
+    }
+
+    /* Not found */
     .not-found {
         @apply flex flex-col items-center justify-center h-screen  text-gray-800 h-main-layout-content;
     }
