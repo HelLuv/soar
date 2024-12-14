@@ -24,7 +24,7 @@ export const SearchBar: FC<Props> = ({ onSubmit }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="search-bar">
       <SearchIcon className="absolute left-6 top-4" />
       <Input
         onKeyDown={handleKeyDown}

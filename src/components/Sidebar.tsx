@@ -17,7 +17,7 @@ export const Sidebar: FC<Props> = ({ links }) => {
           {links.map(({ route, label, Icon }) => {
             const isActive = pathname === route || pathname.startsWith(`${route}/`);
             return (
-              <li key={label} className="sidebar-link">
+              <li key={label} className="sidebar-link" title={label}>
                 <NavLink to={route} end className="flex gap-[26px]">
                   {isActive && <span className="sidebar-active-indicator" />}
                   <div className="size-6">

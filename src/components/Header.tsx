@@ -1,10 +1,11 @@
 import { FC, useEffect } from "react";
 import Logo from "@/components/Logo";
 import { NavLink, useLocation } from "react-router";
-import { SidebarLink } from "@/constants";
-import { SearchBar } from "@/components/SearchBar";
-import SettingsIcon from "@/assets/icons/outlined/settings.svg?react";
 import NotificationIcon from "@/assets/icons/outlined/notification.svg?react";
+import SettingsIcon from "@/assets/icons/outlined/settings.svg?react";
+import { SidebarLink } from "@/constants";
+import { SearchBar } from "./SearchBar";
+import { MobileNav } from "./MobileNav";
 
 type Props = {
   links: SidebarLink[];
@@ -27,10 +28,12 @@ export const Header: FC<Props> = ({ links }) => {
 
   return (
     <header className="w-full h-[100px] flex items-center">
-      <Logo />
+      <Logo className="max-sm:hidden" />
 
-      <section className="px-[40px] max-lg:px-5 h-full flex-1 flex items-center justify-between">
-        <h1 className="text-28 font-extrabold text-blue-900">{pageTitle}</h1>
+      <section className="header">
+        <MobileNav links={links} />
+
+        <h1 className="header-title">{pageTitle}</h1>
 
         <section className="flex gap-[30px] items-center">
           <SearchBar />

@@ -173,14 +173,27 @@
     /* Logo */
     .main-logo {
         @apply transition-all flex items-center gap-4 px-3 lg:w-[250px]
-        border-r border-gray-200 h-full lg:pl-[44px] max-sm:hidden;
+        border-r border-gray-200 h-full lg:pl-[44px];
     }
 
     .main-logo-label {
         @apply max-lg:hidden;
     }
 
+    /* Header */
+    .header {
+        @apply px-[40px] max-lg:px-5 h-full flex-1 flex items-center justify-between;
+    }
+
+    .header-title {
+        @apply text-28 font-extrabold text-blue-900 max-md:text-24 max-sm:text-20 max-md:font-semibold;
+    }
+
     /* SearchBar */
+    .search-bar {
+        @apply relative max-md:hidden;
+    }
+
     .search-bar-input {
         @apply w-[255px] h-[50px] pl-16 rounded-[40px] bg-blue-200
         placeholder:text-[#8BA3CB] text-15;
@@ -203,6 +216,15 @@
 
     .sidebar-label {
         @apply text-18 font-medium text-gray-300 max-lg:hidden;
+    }
+
+    /* Mobile nav */
+    .mobilenav-label {
+        @apply text-16 font-semibold text-gray-300;
+    }
+
+    .mobilenav-sheet_close {
+        @apply flex gap-3 items-center p-4 rounded-lg w-full max-w-60;
     }
 
     /* Bank card */
