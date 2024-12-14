@@ -4,15 +4,18 @@ import { Activity } from "@/types";
 import { ChartConfig } from "@/components/ui/chart";
 import { BarChart } from "@/components/BarChart";
 import { transformChartConfig } from "@/lib/transformChartConfigIntoBars";
+import { cn } from "@/lib/utils";
 
 type Props = {
   data: Activity[];
+  sectionClassName?: string;
+  wrapperClassName?: string;
 };
 
-export const WeeklyActivity: FC<Props> = ({ data = [] }) => {
+export const WeeklyActivity: FC<Props> = ({ data = [], sectionClassName, wrapperClassName }) => {
   return (
-    <Section title="Weekly Activity">
-      <div className="p-6 bg-white rounded-[25px] w-[730px] h-[370px]">
+    <Section title="Weekly Activity" className={sectionClassName}>
+      <div className={cn("p-6 bg-white rounded-[25px] w-[730px] h-[370px]", wrapperClassName)}>
         <BarChart data={data} chartConfig={chartConfig} bars={transformChartConfig(chartConfig)} />
       </div>
     </Section>

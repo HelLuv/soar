@@ -244,6 +244,13 @@
         @apply px-6 h-[70px] flex items-center justify-between gap-2 dark-gradient-2;
     }
 
+    /* Transaction */
+    .transaction {
+        @apply flex items-center justify-between font-medium text-16
+        px-2 transition-all duration-200 rounded-l hover:bg-gray-100;
+    }
+
+    /* Not found */
     .not-found {
         @apply flex flex-col items-center justify-center h-screen  text-gray-800 h-main-layout-content;
     }

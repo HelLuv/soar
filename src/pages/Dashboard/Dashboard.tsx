@@ -17,17 +17,21 @@ import { users } from "@/mock/users";
 const Dashboard: FC = () => {
   return (
     <section className="flex flex-col gap-8">
-      <div className="flex gap-8">
+      <div className="flex gap-x-8 gap-y-4 flex-wrap">
         <BankCards accounts={accounts} />
         <RecentTransactions transactions={transactions} />
       </div>
 
-      <div className="flex gap-8">
-        <WeeklyActivity data={weeklyActivity} />
+      <div className="flex gap-x-8 gap-y-4 flex-wrap">
+        <WeeklyActivity
+          data={weeklyActivity}
+          wrapperClassName="max-2xl:w-full"
+          sectionClassName="max-2xl:w-full"
+        />
         <ExpenseStatistics data={expenseStatistics} />
       </div>
 
-      <div className="flex gap-8">
+      <div className="flex gap-x-8 gap-y-4 flex-wrap">
         <QuickTransfer users={users} />
         <BalanceHistory data={balanceHistory} />
       </div>

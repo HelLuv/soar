@@ -18,7 +18,7 @@ export const BankCards: FC<Props> = ({ accounts }) => {
         </NavLink>
       }
     >
-      <div className="flex gap-8">
+      <div className="flex gap-8 max-2xl:gap-4">
         {accounts.length > 0 && <BankCard account={accounts[0]} variant="dark" />}
         {accounts[1] && <BankCard account={accounts[1]} variant="light" />}
       </div>
