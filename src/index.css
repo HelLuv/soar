@@ -248,7 +248,8 @@
     /* Bank card */
     .bank-card {
         @apply relative flex flex-col h-[235px] min-w-[350px] max-w-[350px] justify-between
-        rounded-[25px] border overflow-hidden font-normal;
+        rounded-[25px] border overflow-hidden font-normal
+        max-sm:min-w-[270px] max-sm:max-w-[270px] max-sm:h-[170px] max-sm:rounded-[15px];
     }
 
     .bank-card_content {
@@ -256,11 +257,11 @@
     }
 
     .bank-card_info {
-        @apply px-6 pt-6;
+        @apply px-6 pt-6 max-sm:px-4 max-sm:pt-4;
     }
 
     .bank-card_number {
-        @apply px-6 h-[70px] flex items-center justify-between gap-2 dark-gradient-2;
+        @apply px-6 h-[70px] flex items-center justify-between gap-2 dark-gradient-2 max-sm:px-4 max-sm:h-[50px];
     }
 
     /* BankCards */
@@ -317,7 +318,7 @@
     /* EditProfile*/
     .edit-profile {
         @apply p-[30px] w-full flex gap-[60px]
-        max-[1200px]:flex-col max-[1200px]:gap-[30px] max-[1200px]:items-center max-lg:p-5;
+        max-[1200px]:flex-col max-[1200px]:gap-[30px] max-[1200px]:items-center max-lg:p-0 max-lg:pt-[30px];
     }
 
     /* EditProfileForm */
