@@ -1,7 +1,13 @@
 {
   "name": "soar",
   "private": true,
-  "version": "0.0.0",
+  "description": "A modern React financial app with TypeScript and Vite.",
+  "author": "Nick Timakov worksperson@gmail.com linkedin.com/in/nick-timakov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HelLuv/soar"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
