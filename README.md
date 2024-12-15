@@ -1,5 +1,8 @@
 # Project Overview
 
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Vercel](https://img.shields.io/badge/Hosted_on-Vercel-black?logo=vercel)
+
 ## Introduction
 
 This project is a **financial dashboard application** focused on performance, scalability, and maintainability. Built
