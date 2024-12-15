@@ -39,15 +39,15 @@ export const QuickTransfer: FC<Props> = ({ users = [] }) => {
           <CarouselNext className="-right-4 top-1/3 size-[40px] max-md:right-0 max-sm:-right-2  max-md:top-1/2" title="Next Users" />
         </Carousel>
 
-        <div className="flex items-center gap-7 text-[16px] justify-end relative">
-          <span className="text-nowrap text-[#718EBF]">Write Amount</span>
+        <div className="flex items-center gap-7 text-[16px] justify-end relative max-sm:gap-4">
+          <span className="text-nowrap text-[#718EBF] max-sm:text-12">Write Amount</span>
           <Input
             className="h-[50px] rounded-[50px] bg-[#EDF1F7] pl-[20px]
-           pr-[145px] py-[15px] text-[#718EBF] max-w-[265px]"
+           pr-[145px] py-[15px] text-[#718EBF] max-w-[265px] max-sm:pr-[110px] max-sm:h-10 max-sm:text-12"
           />
           <Button
             className="w-[125px] h-[50px] rounded-[50px] absolute z-10 right-0
-            bg-[#232323] hover:bg-black text-white"
+            bg-[#232323] hover:bg-black text-white max-sm:h-10  max-sm:w-[100px]"
           >
             <span>Send</span> <SendIcon className="!size-6 ml-1" />
           </Button>
