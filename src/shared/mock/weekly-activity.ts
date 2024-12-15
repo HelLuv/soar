@@ -1,4 +1,4 @@
-import { Activity } from "@/shared/types/financial.types";
+import { Activity } from "@/shared/types/financial";
 
 export const weeklyActivity: Activity[] = [
   {

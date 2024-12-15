@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/shared/ui/button";
 import { Form } from "@/shared/ui/form";
 import { FormInput, FormDatePicker } from "@/shared/components";
-import { User } from "@/shared/types/user.types";
+import { User } from "@/shared/types/user";
 import { profileFormSchema, ProfileFormSchema } from "../schemas/profileFormSchema";
 
 type Props = {

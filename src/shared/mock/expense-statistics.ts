@@ -1,4 +1,4 @@
-import { Expense } from "@/shared/types/financial.types";
+import { Expense } from "@/shared/types/financial";
 
 export const expenseStatistics: Expense[] = [
   {

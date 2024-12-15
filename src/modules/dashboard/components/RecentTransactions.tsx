@@ -2,7 +2,7 @@ import { FC } from "react";
 import { cn } from "@/shared/utils/cn";
 import { Section } from "@/shared/ui/section";
 import { Transaction } from "@/shared/components";
-import { Transaction as TransactionType } from "@/shared/types/financial.types";
+import { Transaction as TransactionType } from "@/shared/types/financial";
 
 type Props = {
   transactions: TransactionType[];

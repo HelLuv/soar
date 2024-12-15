@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Account } from "@/shared/types/financial.types";
+import { Account } from "@/shared/types/financial";
 import { NavLink } from "react-router";
 import { formatCardDate } from "@/shared/utils/format";
 import ChipCard from "@/assets/images/chip-card.png";

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Section } from "@/shared/ui/section";
 import { PieChart } from "@/shared/components";
-import { Expense } from "@/shared/types/financial.types";
+import { Expense } from "@/shared/types/financial";
 
 type Props = {
   data: Expense[];

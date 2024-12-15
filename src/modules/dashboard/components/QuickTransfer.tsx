@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/shared/ui/carousel";
-import { User as UserType } from "@/shared/types/user.types";
+import { User as UserType } from "@/shared/types/user";
 import { User } from "@/shared/components";
 import { Input } from "@/shared/ui/input";
 import { Button } from "@/shared/ui/button";

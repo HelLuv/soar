@@ -1,4 +1,4 @@
-import { User } from "@/shared/types/user.types";
+import { User } from "@/shared/types/user";
 
 export const CURRENT_USER: User = {
   id: "current_user_id",

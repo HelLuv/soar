@@ -2,7 +2,7 @@ import { FC } from "react";
 import { NavLink } from "react-router";
 import { Section } from "@/shared/ui/section";
 import { BankCard } from "@/shared/components";
-import { Account } from "@/shared/types/financial.types";
+import { Account } from "@/shared/types/financial";
 
 type Props = {
   accounts: Account[];

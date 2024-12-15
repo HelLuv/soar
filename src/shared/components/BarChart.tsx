@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Bar, BarChart as ReBarChart, CartesianGrid, XAxis, YAxis } from "recharts";
-import { Activity } from "@/shared/types/financial.types";
+import { Activity } from "@/shared/types/financial";
 import {
   ChartConfig,
   ChartContainer,

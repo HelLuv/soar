@@ -1,4 +1,4 @@
-import { Balance } from "@/shared/types/financial.types";
+import { Balance } from "@/shared/types/financial";
 
 export const balanceHistory: Balance[] = [
   { date: "2024-06-01", value: 100 },

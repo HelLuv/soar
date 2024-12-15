@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Transaction as TransactionType, TransactionSource } from "@/shared/types/financial.types";
+import { Transaction as TransactionType, TransactionSource } from "@/shared/types/financial";
 import { formatMoney } from "@/shared/utils/format";
 import { cn } from "@/shared/utils/cn";
 import { NavLink } from "react-router";

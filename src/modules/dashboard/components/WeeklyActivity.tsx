@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { Section } from "@/shared/ui/section";
-import { Activity } from "@/shared/types/financial.types";
+import { Activity } from "@/shared/types/financial";
 import { ChartConfig } from "@/shared/ui/chart";
 import { BarChart } from "@/shared/components";
 import { transformChartConfig } from "@/shared/utils/transformChartConfigIntoBars";
-import { useResponsiveStore } from "@/shared/stores/responsive.store";
+import { useResponsiveStore } from "@/shared/stores/responsive";
 import { cn } from "@/shared/utils/cn";
 
 type Props = {

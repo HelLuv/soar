@@ -1,4 +1,4 @@
-import { Account } from "@/shared/types/financial.types";
+import { Account } from "@/shared/types/financial";
 
 export const accounts: Account[] = [
   {

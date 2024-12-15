@@ -1,6 +1,6 @@
 import { FC, memo, useCallback } from "react";
 import { cn } from "@/shared/utils/cn";
-import { User as UserType } from "@/shared/types/user.types";
+import { User as UserType } from "@/shared/types/user";
 
 type Props = {
   user: UserType;

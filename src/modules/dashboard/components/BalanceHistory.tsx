@@ -1,7 +1,7 @@
 import { Section } from "@/shared/ui/section";
 import { FC } from "react";
 import { AreaChart } from "@/shared/components";
-import { Balance } from "@/shared/types/financial.types";
+import { Balance } from "@/shared/types/financial";
 
 type Props = {
   data: Balance[];
