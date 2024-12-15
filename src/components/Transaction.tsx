@@ -18,17 +18,17 @@ export const Transaction: FC<Props> = ({ transaction }) => {
       className="transaction"
     >
       <div className="flex items-center gap-4">
-        <div className={cn("w-[55px] h-[55px] rounded-full flex-center", iconVariants[source])}>
+        <div className={cn("size-[55px] rounded-full flex-center max-sm:size-[50px]", iconVariants[source])}>
           <img src={icon} alt="transaction icon" />
         </div>
 
         <div>
-          <h3 className="text-[#232323]">{description}</h3>
-          <p className="text-15 font-normal text-blue-400">{date}</p>
+          <h3 className="text-[#232323] max-sm:text-14">{description}</h3>
+          <p className="text-15 font-normal text-blue-400 max-sm:text-12">{date}</p>
         </div>
       </div>
 
-      <div className={cn("text-[18px] text-green-300", { "text-red-300": !isDeposit })}>
+      <div className={cn("text-[18px] text-green-300 max-sm:text-16", { "text-red-300": !isDeposit })}>
         {isDeposit ? "+" : "-"}
         {formatMoney(amount, currency.code, 0)}
       </div>
