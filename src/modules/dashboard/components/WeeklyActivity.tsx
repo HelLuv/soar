@@ -4,7 +4,7 @@ import { Activity } from "@/shared/types/financial";
 import { ChartConfig } from "@/shared/ui/chart";
 import { BarChart } from "@/shared/components";
 import { transformChartConfig } from "@/shared/utils/transformChartConfigIntoBars";
-import { useResponsiveStore } from "@/shared/stores/responsive";
+import { useResponsiveStore } from "@/shared/stores";
 import { cn } from "@/shared/utils/cn";
 
 type Props = {

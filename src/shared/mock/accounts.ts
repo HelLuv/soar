@@ -8,7 +8,7 @@ export const accounts: Account[] = [
     postfixMask: "1234",
     name: "some account name",
     ownerName: "Nick Miriad",
-    currentBalance: 123.45,
+    currentBalance: 9123.45,
     availableBalance: 100,
     subtype: "some subtype",
     institutionId: "some institutionId",

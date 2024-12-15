@@ -1,6 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 import { FC, ReactNode, useEffect } from "react";
-import { useResponsiveStore } from "@/shared/stores/responsive";
+import { useResponsiveStore } from "@/shared/stores";
 
 type Props = {
   children: ReactNode;
