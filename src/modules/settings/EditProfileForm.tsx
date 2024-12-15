@@ -103,12 +103,12 @@ export const EditProfileForm: FC<Props> = ({ userData }) => {
           required
         />
 
-        <div className="flex-1 flex justify-end mt-5 gap-4">
-          <Button className="w-[190px] h-[50px] rounded-2xl hover:bg-gray-100 text-18" type="reset">
+        <div className="flex-1 flex justify-end mt-5 gap-4 flex-wrap-reverse">
+          <Button className="w-[190px] h-[50px] rounded-2xl hover:bg-gray-100 text-18 max-sm:w-full" type="reset">
             Reset
           </Button>
           <Button
-            className="w-[190px] h-[50px] rounded-2xl bg-[#232323] hover:bg-black text-white text-[18px]"
+            className="w-[190px] h-[50px] rounded-2xl bg-[#232323] hover:bg-black text-white text-[18px] max-sm:w-full"
             type="submit"
           >
             Save

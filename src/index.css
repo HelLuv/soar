@@ -112,6 +112,10 @@
         @apply text-[12px] leading-[16px];
     }
 
+    .text-13 {
+        @apply text-[13px] leading-[18px];
+    }
+
     .text-14 {
         @apply text-[14px] leading-[20px];
     }
@@ -297,8 +301,9 @@
     }
 
     .input-class {
-        @apply !text-[16px] font-normal text-[#718EBF] placeholder:text-15 py-4 px-5 h-[50px] !rounded-2xl
-        border border-[#DFEAF2] placeholder:text-gray-500;
+        @apply text-[16px] font-normal text-[#718EBF] placeholder:text-15 placeholder:text-gray-500
+        py-4 px-5 h-[50px] rounded-2xl border border-[#DFEAF2]
+        max-sm:text-13 max-sm:placeholder:text-15 max-sm:py-3 max-sm:px-4 max-sm:h-[40px] max-sm:rounded-xl;
     }
 
     .form-item {
@@ -306,15 +311,21 @@
     }
 
     .form-label {
-        @apply text-16 w-full max-w-[280px] font-normal text-[#232323];
+        @apply text-16 w-full max-w-[280px] font-normal text-[#232323] max-sm:text-13;
+    }
+
+    /* EditProfile*/
+    .edit-profile {
+        @apply p-[30px] w-full flex gap-[60px]
+        max-[1200px]:flex-col max-[1200px]:gap-[30px] max-[1200px]:items-center max-lg:p-5;
     }
 
     /* EditProfileForm */
     .edit-profile-form {
-        @apply w-full flex flex-wrap gap-x-8 gap-y-5;
+        @apply w-full flex flex-wrap gap-x-8 gap-y-5 max-md:gap-y-4;
     }
 
     .edit-profile-form_item {
-        @apply basis-[calc(50%-16px)];
+        @apply basis-[calc(50%-16px)] max-lg:basis-[100%];
     }
 }
