@@ -13,7 +13,7 @@ export const BankCards: FC<Props> = ({ accounts }) => {
     <Section
       title="My Cards"
       extra={
-        <NavLink to="/credit-cards" className="text-blue-800 text-18 font-semibold max-md:text-14">
+        <NavLink to="/credit-cards" className="text-blue-800 text-18 font-semibold max-md:text-14 hover:text-black">
           See all
         </NavLink>
       }

@@ -86,7 +86,7 @@ export const AvatarImagePicker: FC<Props> = ({ imageUrl = null }) => {
             />
           )}
           <div className="flex justify-end space-x-2">
-            <Button variant="outline" onClick={() => setIsPopoverOpen(false)}>
+            <Button variant="outline" className=" hover:bg-gray-100" onClick={() => setIsPopoverOpen(false)}>
               Cancel
             </Button>
             <Button onClick={handleCrop} className="bg-[#232323] hover:bg-black text-white">

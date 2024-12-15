@@ -18,16 +18,16 @@ export const Sidebar: FC<Props> = ({ links }) => {
             const isActive = pathname === route || pathname.startsWith(`${route}/`);
             return (
               <li key={label} className="sidebar-link" title={label}>
-                <NavLink to={route} end className="flex gap-[26px]">
+                <NavLink to={route} end className="flex gap-[26px] group">
                   {isActive && <span className="sidebar-active-indicator" />}
                   <div className="size-6">
                     <Icon
-                      className={cn({
+                      className={cn('group-hover:brightness-[0] group-hover:invert-0 transition-all',{
                         "brightness-[0] invert-0": isActive,
                       })}
                     />
                   </div>
-                  <p className={cn("sidebar-label flex-1", { "!text-black": isActive })}>{label}</p>
+                  <p className={cn("sidebar-label", { "!text-black": isActive })}>{label}</p>
                 </NavLink>
               </li>
             );
