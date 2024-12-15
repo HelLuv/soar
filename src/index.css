@@ -317,7 +317,7 @@
     /* EditProfile*/
     .edit-profile {
         @apply p-[30px] w-full flex gap-[60px]
-        max-[1200px]:flex-col max-[1200px]:gap-[30px] max-[1200px]:items-center max-lg:p-5;
+        max-[1200px]:flex-col max-[1200px]:gap-[30px] max-[1200px]:items-center max-lg:p-0;
     }
 
     /* EditProfileForm */
