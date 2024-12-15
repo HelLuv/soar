@@ -42,7 +42,7 @@ export const AvatarImagePicker: FC<Props> = ({ imageUrl = null }) => {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-4 relative h-fit">
+    <div className="flex flex-col items-center space-y-4 relative h-fit w-fit">
       <div className="relative size-[90px]">
         {croppedImage ? (
           <img
@@ -74,7 +74,7 @@ export const AvatarImagePicker: FC<Props> = ({ imageUrl = null }) => {
           </Button>
         </PopoverTrigger>
 
-        <PopoverContent className="w-auto max-w-[50vw] text-black bg-white/90" align="center">
+        <PopoverContent className="w-auto max-w-[50vw] max-lg:max-w-[90vw] text-black bg-white/90" align="center">
           {imageSrc && (
             <Cropper
               src={imageSrc}
@@ -82,7 +82,7 @@ export const AvatarImagePicker: FC<Props> = ({ imageUrl = null }) => {
               aspectRatio={1}
               guides={false}
               ref={cropperRef}
-              className="mb-4 max-w-[50vw]"
+              className="mb-4 max-w-[50vw] max-lg:max-w-[90vw]"
             />
           )}
           <div className="flex justify-end space-x-2">
